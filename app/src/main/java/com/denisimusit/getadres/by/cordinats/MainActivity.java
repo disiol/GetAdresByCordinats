@@ -18,7 +18,7 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private EditText myLatitude;
     private EditText myLongitude;
-    private TextView myAddress;
+    private EditText myAddress;
 
     private Button getAddressButton;
     private Geocoder geocoder;
@@ -34,10 +34,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         geocoder = new Geocoder(this, Locale.getDefault());
 
-        myLatitude = (EditText) findViewById(R.id.latitude);
-        myLongitude = (EditText) findViewById(R.id.longitude);
-        myAddress = (TextView) findViewById(R.id.address);
-        getAddressButton = (Button) findViewById(R.id.get_address_button);
+        myLatitude = findViewById(R.id.latitude);
+        myLongitude = findViewById(R.id.longitude);
+        myAddress =  findViewById(R.id.address);
+        getAddressButton = findViewById(R.id.get_address_button);
         getAddressButton.setOnClickListener(this);
 
     }
